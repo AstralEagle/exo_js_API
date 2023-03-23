@@ -9,19 +9,21 @@ const todoSchema = new Schema({
     type: String,
     required: true,
   },
+  isFinish: {
+    type: Boolean,
+    default: false,
+  },
+  dateEnd: {
+    type: Date,
+    require: true,
+  },
   listID: {
     type: Schema.Types.ObjectId,
     ref: 'List',
     required: true,
   },
-  isFinish: {
-    type: Boolean,
-    default: false,
-  },
-  creation: {
-    type: Date,
-    default: Date.now(),
-  },
+}, {
+  timestamps: true,
 });
 
 const ToDo = model('ToDo', todoSchema);

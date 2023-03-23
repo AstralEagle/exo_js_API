@@ -1,7 +1,6 @@
 {
     "env": {
         "browser": true,
-        "commonjs": true,
         "es2021": true
     },
     "extends": "airbnb-base",
@@ -22,6 +21,9 @@
         "no-path-concat": 2,
         "no-process-exit": 2,
         "no-restricted-modules": 0,
-        "no-sync": 0
+        "no-sync": 0,
+        "no-underscore-dangle": 0,
+        "consistent-return": 0,
+        "import/no-extraneous-dependencies": 0
     }
 }
